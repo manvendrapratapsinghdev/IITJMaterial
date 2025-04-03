@@ -13,26 +13,39 @@
 
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Quizzes</h3>
-<ul id="quizList" class="space-y-2"></ul>
+                <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Quiz</h3>
+                <ul id="quizList" class="space-y-2"></ul>  
             </div>
             <div>
                 <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Assignments</h3>
-<ul id="assignmentList" class="space-y-2"></ul>
+                <ul id="assignmentList" class="space-y-2"></ul>
             </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Exams</h3>
+                <ul id="examlist" class="space-y-2"></ul>
+            </div>
+           
+            
         </div>
     </div>
 
     <script>
-        const quizzes = [
-             { name: "AI-3rd", dueDate: "2025-04-06" },
-            { name: "ML-3rd", dueDate: "2025-04-13" },
+        const exams = [
+             { name: "ML", dueDate: "2025-04-18 09:00 AM" },
+             { name: "DSAT", dueDate: "2025-04-18 02:00 AM" },
+             { name: "ODS", dueDate: "2025-04-19 09:00 AM" },
+             { name: "AI", dueDate: "2025-04-19 02:00 AM" },
         ];
 
         const assignments = [
             { name: "ODS", dueDate: "2025-04-13" },
          { name: "ML-2nd", dueDate: "2025-04-13" },
-         { name: "DSA-2nd", dueDate: "2025-04-13" }
+         { name: "DSA-2nd", dueDate: "2025-04-15" }
+        ];
+
+        const quiz = [
+            { name: "Quiz 2 - AI", dueDate: "2025-04-06" },
+            { name: "Quiz 2 - ML", dueDate: "2025-04-13" }
         ];
 
         function getColor(daysLeft) {
@@ -48,12 +61,19 @@
             const options = { day: "2-digit", month: "short" };
             return date.toLocaleDateString("en-GB", options);
         }
-function formatDayLeft(dayLeft) {
-    if (dayLeft == 0) {
-        return "Today";
-    }
-    return `${dayLeft} days`;
-}
+
+        function formatDateWithTime(dateStr) {
+            const date = new Date(dateStr);
+            const options = { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", hour12: true };
+            return date.toLocaleDateString("en-GB", options);
+        }
+
+        function formatDayLeft(dayLeft) {
+            if (dayLeft == 0) {
+                return "Today";
+            }
+            return `${dayLeft} days`;
+        }
 
         function loadTasks(listId, tasks) {
             const list = document.getElementById(listId);
@@ -69,24 +89,24 @@ function formatDayLeft(dayLeft) {
 
                 li.innerHTML = `
                     <div class="flex items-center justify-center w-12 h-14 font-bold text-lg border-r border-white">
-    ${index + 1}
-</div>
-<div class="flex-1 px-3 py-2 border-r border-white">
-    <div class="text-lg font-bold">${name}</div>
-    <div class="text-sm">${formatDate(dueDate)}</div>
-</div>
-<div class="flex items-center justify-center w-16 h-14 font-bold text-sm">
-    ${formatDayLeft(daysLeft)}
-</div>
-
+                        ${index + 1}
+                    </div>
+                    <div class="flex-1 px-3 py-2 border-r border-white">
+                        <div class="text-lg font-bold">${name}</div>
+                        <div class="text-sm">${listId === 'examlist' ? formatDateWithTime(dueDate) : formatDate(dueDate)}</div>
+                    </div>
+                    <div class="flex items-center justify-center w-16 h-14 font-bold text-sm">
+                        ${formatDayLeft(daysLeft)}
+                    </div>
                 `;
 
                 list.appendChild(li);
             });
         }
-
-        loadTasks("quizList", quizzes);
+       
+        loadTasks("examlist", exams);
         loadTasks("assignmentList", assignments);
+        loadTasks("quizList", quiz);
     </script>
 
 </body>
