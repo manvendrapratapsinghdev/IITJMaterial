@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Report for Machine Learning Assignment 2</title>
+</head>
+<body>
+    <h1>Combined Report for Machine Learning Assignment 2</h1>
+    <hr>
+    <h2>Part A</h2>
+
+    <h3>1. Implementation Questions</h3>
+
+    <h4>1.1 Download the Dataset</h4>
+    <p><strong>Understanding:</strong> The task requires downloading a dataset and loading it into a DataFrame for further analysis.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The dataset <code>diabetes (1).csv</code> is loaded using <code>pandas.read_csv()</code> into the variable <code>df</code>.</li>
+        <li>The original DataFrame is preserved in the variable <code>Original_df</code> for reference.</li>
+    </ul>
+
+    <h4>1.2 Understand the Data</h4>
+    <p><strong>Understanding:</strong> Before preprocessing, it is essential to explore the dataset to understand its structure, size, data types, and any missing or duplicate values.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>data_understand()</code> is defined to check the size, shape, data types, descriptive statistics, and missing values.</li>
+        <li>Duplicate rows are identified using <code>df.duplicated()</code> and counted in the variable <code>duplicate_count</code>.</li>
+        <li>The dataset is found to have no missing or duplicate values, confirmed by <code>missing_values</code> and <code>duplicate_count</code>.</li>
+    </ul>
+
+    <h4>1.3 Exploratory Data Analysis (EDA)</h4>
+    <p><strong>Understanding:</strong> EDA involves visualizing the data to identify patterns, relationships, and potential outliers.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The functions <code>plot_histograms()</code>, <code>plot_scatter_matrix()</code>, and <code>plot_correlation_matrix()</code> are defined to visualize the data.</li>
+        <li>These visualizations help in understanding the distribution and relationships between features, stored in <code>histograms</code>, <code>scatter_matrix</code>, and <code>correlation_matrix</code> respectively.</li>
+    </ul>
+
+    <h4>1.4 Data Cleaning</h4>
+    <p><strong>Understanding:</strong> Data cleaning involves handling missing values, removing duplicates, and reducing noise in the dataset.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>Missing values are handled using <code>SimpleImputer</code> (though not required here as no missing values are present).</li>
+        <li>Duplicate rows are removed using <code>df.drop_duplicates()</code> (not required here as no duplicates are present).</li>
+        <li>Noise is reduced in the <code>BloodPressure</code> column using the IQR method implemented in the function <code>reduce_noise()</code> and stored in the variable <code>cleaned_data</code>.</li>
+    </ul>
+
+    <h4>1.5 Data Transformation</h4>
+    <p><strong>Understanding:</strong> Data transformation involves scaling and encoding features to make them suitable for machine learning models.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>Categorical features are encoded using <code>LabelEncoder</code> in the function <code>encode_categorical_features()</code> and stored in the variable <code>encoded_features</code>.</li>
+        <li>Numerical features are scaled using <code>StandardScaler</code> or <code>MinMaxScaler</code> in the function <code>scale_features()</code> and stored in the variable <code>scaled_features</code>.</li>
+    </ul>
+
+    <h4>1.6 Principal Component Analysis (PCA)</h4>
+    <p><strong>Understanding:</strong> The task requires finding the optimal number of principal components to retain 95% of the variance in the data.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>PCA is applied to the standardized features stored in the variable <code>X_scaled</code>.</li>
+        <li>The cumulative explained variance is plotted using <code>explained_variance</code> to determine the optimal number of components.</li>
+        <li>The optimal number of components is found to be stored in the variable <code>optimal_components</code>.</li>
+    </ul>
+
+    <h4>1.7 Regression Models with PCA</h4>
+    <p><strong>Understanding:</strong> Compare the performance of regression models on the original data and the reduced data (using PCA).</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>Two regression models <code>LogisticRegression</code> and <code>RandomForestClassifier</code> are trained on both the original data <code>X_scaled</code> and PCA-reduced data <code>X_reduced</code>.</li>
+        <li>Accuracy and Mean Absolute Error (MAE) are calculated for both cases and stored in the dictionary <code>results</code>.</li>
+        <li>Results are compared to evaluate the impact of dimensionality reduction.</li>
+    </ul>
+
+    <h4>3.6 Plot Loss and Accuracy Curves</h4>
+    <p><strong>Understanding:</strong> Visualize the training and validation loss/accuracy curves for both implementations.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>Loss and accuracy curves are plotted for both NumPy and Sklearn implementations using <code>matplotlib.pyplot</code>.</li>
+        <li>The results are compared to analyze the performance of both approaches.</li>
+    </ul>
+
+    <hr>
+    <h2>Part B</h2>
+
+    <h3>1. Implementation</h3>
+
+    <h4>1.1 Download the Dataset</h4>
+    <p><strong>Understanding:</strong> The task requires downloading a dataset and loading it into a DataFrame for further analysis.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The dataset <code>Diabetes Health Indicators</code> is downloaded using the <code>kagglehub</code> library.</li>
+        <li>The dataset is loaded into a Pandas DataFrame using <code>pd.read_csv()</code> and stored in the variable <code>df</code>.</li>
+        <li>A copy of the original DataFrame is preserved in the variable <code>df_copy</code> for reference.</li>
+    </ul>
+
+    <h4>1.2 Data Exploration</h4>
+    <p><strong>Understanding:</strong> Before preprocessing, it is essential to explore the dataset to understand its structure, size, data types, and any missing or duplicate values.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>explore_data()</code> is defined to check the dataset's info, summary statistics, and missing values.</li>
+        <li>Duplicate rows are identified using <code>df.duplicated()</code> and counted.</li>
+        <li>The dataset is found to have no missing or duplicate values.</li>
+    </ul>
+
+    <h4>1.3 Data Visualization</h4>
+    <p><strong>Understanding:</strong> Visualizations help analyze feature relationships and class distributions.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>A correlation heatmap is generated using the function <code>plot_correlation_heatmap()</code> to visualize feature correlations.</li>
+        <li>The target variable distribution is visualized using the function <code>plot_target_distribution()</code>.</li>
+        <li>Histograms for numerical features are plotted using the function <code>plot_feature_distributions()</code> to understand feature distributions and detect skewness or outliers.</li>
+    </ul>
+
+    <h3>2. Data Preprocessing</h3>
+
+    <h4>2.1 Handling Missing Values</h4>
+    <p><strong>Understanding:</strong> Missing values can impact model performance, so handling them is crucial before training.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>handle_missing_values()</code> is defined to fill missing values with the mean and drop columns with ≥70% missing data.</li>
+        <li>As the dataset has no missing values, this step is not applied.</li>
+    </ul>
+
+    <h4>2.2 Removing Duplicates</h4>
+    <p><strong>Understanding:</strong> Duplicate rows can introduce bias in the model.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>remove_duplicates()</code> is defined to remove duplicate rows from the dataset.</li>
+        <li>Duplicate rows are removed, and the dataset is updated.</li>
+    </ul>
+
+    <h4>2.3 Handling Outliers</h4>
+    <p><strong>Understanding:</strong> Outliers can skew the model's performance and need to be handled.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>handle_outliers()</code> is defined to handle outliers using either the Z-score or IQR method.</li>
+        <li>Outliers are removed from the dataset using the Z-score method with a threshold of 3.</li>
+    </ul>
+
+    <h4>2.4 Encoding Categorical Variables</h4>
+    <p><strong>Understanding:</strong> Machine learning algorithms require numerical inputs, so categorical values must be transformed.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>encode_categorical()</code> is defined to encode categorical variables using label encoding.</li>
+        <li>Categorical columns are encoded, and the dataset is updated.</li>
+    </ul>
+
+    <h4>2.5 Feature Scaling</h4>
+    <p><strong>Understanding:</strong> Scaling ensures that features with different units do not dominate model training.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>scale_features()</code> is defined to scale numerical features using standardization or normalization.</li>
+        <li>Features are scaled using standardization.</li>
+    </ul>
+
+    <h4>2.6 Feature Selection</h4>
+    <p><strong>Understanding:</strong> Feature selection helps reduce dimensionality, prevent overfitting, and improve interpretability.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>select_features()</code> is defined to remove highly correlated features based on a threshold.</li>
+        <li>Features with a correlation above 0.85 are removed.</li>
+    </ul>
+
+    <h4>2.7 Cleaning Target Variable</h4>
+    <p><strong>Understanding:</strong> The target variable must be in a binary format for classification.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>clean_target_variable()</code> is defined to ensure the target variable contains only 0 and 1.</li>
+        <li>The target variable is cleaned and updated.</li>
+    </ul>
+
+    <h3>3. Model Building</h3>
+
+    <h4>3.1 Splitting Data</h4>
+    <p><strong>Understanding:</strong> Dividing the dataset into training and testing sets ensures the model generalizes to unseen data.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>split_data()</code> is defined to split the dataset into training and testing sets.</li>
+        <li>The dataset is split with 80% for training and 20% for testing.</li>
+    </ul>
+
+    <h4>3.2 Model Selection</h4>
+    <p><strong>Understanding:</strong> Different models are tested for accuracy and efficiency.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>select_models()</code> is defined to initialize Logistic Regression, Random Forest, and XGBoost models.</li>
+        <li>The models are selected for training and evaluation.</li>
+    </ul>
+
+    <h4>3.3 Model Training</h4>
+    <p><strong>Understanding:</strong> Each model learns patterns from the dataset to make predictions.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>train_models()</code> is defined to train multiple models on the training dataset.</li>
+        <li>The models are trained, and the trained models are stored.</li>
+    </ul>
+
+    <h4>3.4 Model Evaluation</h4>
+    <p><strong>Understanding:</strong> Model performance is measured using accuracy, precision, recall, F1-score, and AUC-ROC.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>evaluate_models()</code> is defined to evaluate trained models on the test dataset.</li>
+        <li>Evaluation metrics are calculated for each model and compared.</li>
+    </ul>
+
+    <h4>3.5 Hyperparameter Tuning</h4>
+    <p><strong>Understanding:</strong> Optimizing model parameters improves performance.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>tune_hyperparameters()</code> is defined to perform hyperparameter tuning using GridSearchCV.</li>
+        <li>The best hyperparameters are identified, and the models are updated.</li>
+    </ul>
+
+    <h3>4. Model Deployment</h3>
+
+    <h4>4.1 Save the Best Model</h4>
+    <p><strong>Understanding:</strong> The best-performing model is stored for future use.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>save_model()</code> is defined to save the trained model as a file.</li>
+        <li>The best-performing model is saved as <code>diabetes_model.pkl</code>.</li>
+    </ul>
+
+    <h4>4.2 Load the Model & Make Predictions</h4>
+    <p><strong>Understanding:</strong> The saved model is loaded to make predictions on new data.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>load_model()</code> is defined to load a saved model from a file.</li>
+        <li>Predictions are made on new data using the loaded model.</li>
+    </ul>
+
+    <h4>4.3 Convert Doctor Input</h4>
+    <p><strong>Understanding:</strong> Doctor input must be converted into a format suitable for the model.</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+        <li>The function <code>convert_doctor_input()</code> is defined to convert doctor input into a Pandas DataFrame.</li>
+        <li>Predictions are made on the converted input using the trained model.</li>
+    </ul>
+</body>
+</html>
