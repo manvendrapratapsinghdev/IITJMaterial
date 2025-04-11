@@ -1,0 +1,732 @@
+Recap
+Based on the context provided, here's a recap of the key points discussed in the meeting:
+
+
+The professor briefly reviewed support vector machines (SVMs) from the previous class.
+
+
+They mentioned that SVMs involve complex mathematics for derivations and kernels, transforming from linear to non-dimensional space.
+
+
+The professor plans to demonstrate some code snippets on how SVMs work, either in this session or the next.
+
+
+Common kernels for SVMs were mentioned: linear, polynomial, Gaussian, and sigmoid.
+
+
+SVMs can be used for both classification and regression tasks.
+
+
+The professor will share a notebook with code examples after the assignment due date (March 2nd or later).
+
+
+The next class is scheduled for 11:30 AM instead of 8 AM.
+
+
+The professor plans to discuss Bayesian classification after a brief explanation of SVM mathematical formulations using slides from Columbia University.
+
+
+This recap covers the main points discussed in the meeting regarding the review and upcoming topics.
+
+
+
+
+
+What is covered in Columbia University slides till now?
+Based on the context, the Columbia University slides covered the following topics related to Support Vector Machines (SVMs):
+
+Introduction to SVMs and their applications
+Linear discriminant functions
+Concept of hyperplanes in different dimensions
+Large margin linear classifiers
+Mathematical formulation of SVMs, including:
+
+Equation of the discriminant function (WTX + B)
+Definition of weight vector W and bias B
+Classification based on the sign of the discriminant function
+
+
+Optimization problem for finding the best hyperplane:
+
+Maximizing the margin width
+Constraints for classification
+Formulation of the objective function to minimize ||W||^2/2
+
+
+
+The slides provide a mathematical foundation for understanding how SVMs work, focusing on the linear case in 2D space while mentioning extensions to higher dimensions.
+
+
+
+
+
+What is Large Margin Linear classifier and what prof explained about it
+Based on the context, the professor explained the following about Large Margin Linear classifiers:
+
+
+It's a type of linear classifier that aims to find the maximum margin between classes.
+
+
+The margin is defined as the width the decision boundary could be increased before hitting a data point.
+
+
+It tries to find the equation of a line (in 2D) or hyperplane (in higher dimensions) that best separates the classes.
+
+
+The goal is to maximize the margin width, which is mathematically expressed as 2/||W||, where W is the weight vector.
+
+
+The professor set up an optimization problem to find the optimal W that maximizes this margin while satisfying certain constraints.
+
+
+The optimization problem is formulated as minimizing (1/2)||W||^2 subject to constraints, which can be solved using quadratic programming.
+
+
+The professor emphasized that understanding this concept in 2D is sufficient, as the code will handle higher dimensions automatically.
+
+
+
+What prof told about Optimization Problem?
+Based on the context, the professor explained the following about the optimization problem for support vector machines:
+
+
+The goal is to maximize the margin width between support vectors.
+
+
+The margin width was found to be 2/||W||.
+
+
+To maximize this, they set up an optimization problem to minimize ||W||^2/2 (equivalent to maximizing the margin).
+
+
+The optimization problem has constraints based on the equations of the separating hyperplanes.
+
+
+This forms a quadratic programming problem with constraints.
+
+
+The professor mentioned that quadratic programming is used to find the optimal solution when there are infinite possible solutions within the constraints.
+
+
+The professor presented this as part of explaining how the support vector machine algorithm finds the optimal separating hyperplane.
+
+
+
+What prof told about quadratic programming problem?
+Based on the context, the professor mentioned the following about quadratic programming in relation to support vector machines:
+
+
+Quadratic programming can be used to solve the optimization problem for support vector machines.
+
+
+It involves finding an optimal solution for an equation with constraints.
+
+
+There is usually no single fixed solution, but rather a range of possible optimal solutions.
+
+
+In highly constrained problems, it may be possible to find a particular solution.
+
+
+The professor suggested that those who are mathematically inclined could try to solve the optimization problem mathematically using quadratic programming techniques.
+
+
+The professor did not go into great detail about quadratic programming, but presented it as a method to solve the optimization problem involved in finding the optimal hyperplane for support vector machines.
+
+
+
+
+Catch me up on this meeting.
+Here's a brief summary of the meeting:
+This is a Machine Learning class session. The main topics covered were:
+
+A recap of Support Vector Machines (SVM) from the previous class.
+Discussion on SVM kernels - linear, polynomial, Gaussian, and sigmoid.
+Mention of a demonstration session planned for the next day.
+Introduction to the mathematical formulation behind SVMs, including:
+
+Linear discriminant functions
+Large margin linear classifiers
+Optimization problem setup for SVMs
+
+
+The professor used slides from Columbia University to explain these concepts.
+There was a brief mention of moving on to Bayesian classification after this topic.
+
+The professor also announced that the next day's lecture would be at 11:30 AM instead of 8 AM due to a schedule change.
+
+
+
+What topics have been discussed?
+Based on the context provided, the main topics discussed in this meeting were:
+
+Support Vector Machines (SVM)
+Linear discriminant functions
+Optimization problem for SVM
+Margin maximization in SVM
+Mathematical formulation of SVM
+Brief mention of upcoming topics like Bayesian classification
+
+The professor also mentioned that there would be a demonstration session either that day or the next day to show some code snippets on how SVM works practically.
+
+
+
+What is the Question by Vikash and Adil and Himadri? What prof response?
+Based on the context, here are the questions asked by Vikash, Adil, and Himadri, along with the professor's responses:
+
+
+Vikash asked about how data points fit on the line Wx + B = 0 and how the algorithm handles points above and below the line. The professor explained that the algorithm considers data points both above and below, trying to find the largest possible gap between the two classes.
+
+
+Adil briefly asked if the double mod notation (||W||) was a norm notation. The professor didn't directly answer this question.
+
+
+Himadri asked about the reason for using double mod (||W||) instead of a single mod (|W|) in the SVM formulation. He questioned whether it's possible to use a single mod. The professor admitted he hadn't thought about that and said he would get back to them on this question the next day. He also invited others to share if they find any information on this.
+
+
+The professor's main response was that he needed to check on the double mod vs single mod question and would provide an answer in the next class. He also encouraged students to look into it if they were interested.
+
+
+
+
+What was Prabhakar's question and What is Prof answer?
+Prabhakar's question was about whether support vector machines (SVMs) are always used for classification problems with two clusters, and never for regression or problems with more than two clusters.
+The professor's answer was:
+
+SVMs can be used for regression as well as classification.
+In classification, SVMs try to increase the width of the "street" (margin) separating classes.
+In regression, SVMs try to bring points closer to the center of the "street" instead.
+Nonlinear regression is also possible with SVMs.
+The professor showed a code snippet demonstrating how to use SVMs for regression, mentioning parameters like epsilon that control the width of the regression "street".
+
+The professor corrected Prabhakar's assumption that SVMs are only for classification, explaining how they can be adapted for regression tasks as well.
+
+
+
+What is the concept of Bayesian Classification?
+Based on the context, Bayesian classification is a probabilistic approach to classification that uses Bayes' theorem. Key points about Bayesian classification mentioned in the context include:
+
+
+It is based on Bayes' theorem from probability theory.
+
+
+It involves conditional probability - finding the probability of an event given that another event has already occurred.
+
+
+It uses a probabilistic approach to get a different view of the data.
+
+
+For a given condition with multiple options, it checks the probability of each option and makes a decision based on the summation of probabilities.
+
+
+It is similar in some ways to logistic regression, which is also a probability-based classifier.
+
+
+The instructor mentions that this concept can sometimes be confusing, but understanding Bayes' theorem is key to grasping the concepts of Bayesian classification. The lecture was about to go into more details on this topic when the context ended.
+
+
+Explain Probability slide and capture formulas
+Based on the context, here is an explanation of the probability slide and formulas:
+The slide discusses conditional probability and Bayes' theorem.
+Key formulas:
+
+Conditional probability: P(A|B) = P(A ∩ B) / P(B)
+
+This formula represents the probability of event A occurring, given that event B has occurred.
+
+Bayes' theorem: P(A|B) * P(B) = P(B|A) * P(A)
+
+This equation shows the relationship between conditional probabilities of events A and B.
+The instructor explains that these formulas are fundamental to understanding Bayesian classification, which uses probability to make decisions based on prior information. The slide aims to review basic probability concepts before delving into more complex Bayesian classification methods.
+
+
+
+Can you explain the example on Bayes' theorem discussed?
+Here's a concise explanation of the Bayes' theorem example discussed:
+The problem was to find the probability of having 2 girls given that at least one child is a girl.
+Using Bayes' theorem:
+P(2 girls | at least 1 girl) = P(at least 1 girl | 2 girls) * P(2 girls) / P(at least 1 girl)
+Where:
+
+Event A: Having 2 girls
+Event B: Having at least 1 girl
+
+P(at least 1 girl | 2 girls) = 1 (certainty)
+P(2 girls) = 1/4
+P(at least 1 girl) = 3/4 (GG, GB, BG)
+Plugging in the values:
+1 * (1/4) / (3/4) = 1/3
+So the probability of having 2 girls, given that at least one child is a girl, is 1/3.
+
+
+
+
+What prof explained about The probability of having a disease given a symptom.
+Based on the context, the professor explained that the probability of having a disease given a symptom can be calculated using Bayes' Theorem. He provided the following formula:
+P(Disease | Symptom) =  / P(Symptom)
+Where:
+P(Symptom) = P(Symptom | Disease) * P(Disease) + P(Symptom | No Disease) * P(No Disease)
+The professor used this as an example to illustrate how Bayes' Theorem can be applied in a medical context to determine the probability of a disease given the presence of a certain symptom.
+
+
+
+What prof explained aboit state of nature/Prior using Salmon and sea bass example
+Based on the context, the professor explained the concept of prior probability using the example of salmon and sea bass fish. Specifically:
+
+
+Prior probability reflects domain experts' knowledge of how likely each type of fish (salmon or sea bass) will appear before actually seeing it, based on past experience.
+
+
+The professor gave an example that if someone has gone fishing in the ocean before, they might know that historically 60% of the catch has been sea bass and 40% has been salmon.
+
+
+However, in the specific example given for the classification problem, the professor stated that the catch of salmon and sea bass is equally probable.
+
+
+The professor noted that these are exclusive and exhaustive events, meaning a fish can only be either salmon or sea bass in this simplified example.
+
+
+This example was used to introduce the concept of prior probability in the context of Bayesian classification for sorting fish on a conveyor belt using optical sensing.
+
+
+Based on the context, the professor explained the concept of prior probability or "state of nature" using an example with salmon and sea bass:
+
+
+Prior probability reflects domain experts' knowledge of how likely each type of fish will appear before actually seeing it, based on past experience.
+
+
+In the example, the catch of salmon and sea bass is equally probable.
+
+
+The probabilities are exclusive (only one can occur at a time) and exhaustive (they cover all possibilities).
+
+
+The prior probabilities were set as 0.5 for salmon and 0.5 for sea bass, meaning there's a 50% chance of catching either fish based on prior experience.
+
+
+This information is used as a starting point before any new observations are made.
+
+
+The professor used this example to illustrate how prior knowledge can be incorporated into a classification problem before any actual data is observed.
+
+
+
+
+
+
+
+What Prof told about size as feature and problem analysis? Also what he explained about feature distribution with example?
+Based on the context, here's what the professor explained about size as a feature and feature distribution:
+
+Size (length) as a feature:
+
+
+Length was mentioned as one of the suggested features for classifying fish species (salmon vs sea bass).
+A histogram was shown depicting the length distribution for salmon and sea bass.
+Salmon generally had smaller lengths (mostly under 10 units), while sea bass had longer lengths (mostly around 15-17 units).
+However, there was overlap in the length distributions, meaning some salmon could be longer and some sea bass could be shorter.
+
+
+Problem analysis:
+
+
+Using length alone as a classification feature would lead to errors.
+No single threshold value for length could unambiguously discriminate between the two species.
+
+
+Feature distribution example:
+
+
+The professor used the length histogram as an example of feature distribution.
+It showed how the length feature was distributed differently for salmon and sea bass, but with some overlap.
+This distribution demonstrates why using a single threshold on length would result in classification errors.
+
+The professor emphasized that understanding feature distributions is important for developing effective classifiers and recognizing the limitations of using single features for classification.
+
+
+
+What prof told about class conditional Probabilities?
+Based on the context, the professor explained the following about class conditional probabilities:
+
+
+They are represented as P(X|Omega_i), where X is a feature value and Omega_i is a class category.
+
+
+They describe the difference in features (like length or lightness) between populations of different fish categories (sea bass and salmon in this example).
+
+
+They are shown as probability density functions for each class.
+
+
+The area under each class conditional probability density curve is normalized to 1.0.
+
+
+They allow calculating the probability of observing a particular feature value given that an item belongs to a specific class.
+
+
+The professor demonstrated how to read probabilities from these density function graphs for different feature values and classes.
+
+
+The professor used these concepts to explain how class conditional probabilities can be used in classification problems, specifically in distinguishing between different fish species based on their features.
+
+
+
+Class condition PDF what prof explained?
+The professor explained the class conditional probability density function (PDF) for the fish classification example. Specifically:
+
+It shows the probability density of measuring a particular feature value X, given that the pattern belongs to a certain category (omega 1 or omega 2)
+Two curves were shown, one for sea bass (omega 1) and one for salmon (omega 2)
+The area under each curve sums to 1
+It allows calculating probabilities like P(X=10 | omega 1) or P(X=13 | omega 2) by looking at the curve values
+This represents the second part of the classification equation, showing the likelihood of a feature occurring given the class
+
+The professor emphasized this is important for understanding how to classify fish based on features like length, though using a single feature alone is not sufficient for accurate classification.
+
+
+
+What was Allabaksh question and prof answered?
+Based on the context, Allabaksh asked a question about where the probabilities for salmon and sea bass would have an equal probability of occurring. The professor responded by explaining that this is part of the classification equation, specifically the class conditional probability or likelihood. He clarified that it shows the probability of a feature occurring given the class, and that they are not supposed to sum to 1, as they are different functions for different classes.
+Based on the context, Allabaksh asked a question about where the probabilities for salmon and sea bass would have an overlap or equal probability of occurring. The professor clarified that this image shows the class conditional probabilities for each class separately, not their combined probability. He explained that these are two different probability density functions for the two classes (omega 1 and omega 2), and they are not meant to sum to 1 when added together. Each function shows the probability distribution of fish lengths within its own class.
+
+
+
+
+What was Krusha's question and Prof answer?
+Krusha's question was about confusion regarding the integration mentioned by the professor. Specifically, she was confused about the statement that the integration of P(x) equals 1.
+The professor clarified that this integration refers to the definition of a probability density function, where the area under the curve must equal 1. He explained that for both Omega 1 and Omega 2, the area under their respective probability density function curves is 1.
+The professor further clarified that P(x|Omega 1) integrated from negative infinity to positive infinity equals 1, and similarly P(x|Omega 2) integrated over the same range also equals 1. This is a fundamental property of probability density functions.
+
+
+
+
+Extract Equations of Bayes' classification slide
+Based on the context provided, the key equations for Bayes' classification shown on the current slide are:
+
+Posterior probability:
+P(ωi|x) =  / P(x)
+
+Where:
+P(ωi|x) is the posterior probability
+P(x|ωi) is the likelihood or class conditional probability
+P(ωi) is the prior probability
+P(x) is the evidence (normalization factor)
+
+
+The evidence P(x) is calculated as:
+P(x) = Σ P(x|ωi) * P(ωi)
+
+
+The posterior probabilities sum to 1 for all classes:
+Σ P(ωi|x) = 1
+
+
+These equations form the core of Bayesian classification as described in the lecture.
+
+
+
+what was the equation with likelihood?
+The equation involving likelihood that was discussed in the context is:
+Posterior probability = (Prior probability * Likelihood) / Evidence
+More specifically:
+P(Omega_i | X) =  / P(X)
+Where:
+
+P(Omega_i | X) is the posterior probability
+P(Omega_i) is the prior probability
+P(X | Omega_i) is the likelihood (also called class conditional probability)
+P(X) is the evidence (normalization factor)
+
+The professor explained that this equation is used in Bayesian classification to determine the probability of a sample belonging to a particular class given its features.
+
+
+
+
+
+
+What did prof did to solve problem?
+Based on the context, the professor solved the problem by applying Bayes' theorem to calculate the posterior probabilities for classifying a fish with length 14 into two categories (omega 1 and omega 2).
+He used the following information:
+
+Prior probabilities: P(omega 1) = 2/3, P(omega 2) = 1/3
+Class conditional probabilities (likelihood) from a graph shown in Figure 2.1
+The feature value X = 14 (fish length)
+
+Using these, he calculated the posterior probabilities:
+P(omega 2 | X=14) = 0.08
+P(omega 1 | X=14) = 0.92
+This shows that given a fish of length 14, there is a 92% probability it belongs to category omega 1 and an 8% probability it belongs to category omega 2.
+The professor demonstrated how to use prior knowledge and observed data to make a classification decision using Bayesian methods.
+
+
+
+Catch me up on calculations with Salmon and Sea bass classification problem
+Based on the context provided, here's a summary of the calculations for the Salmon and Sea bass classification problem:
+
+
+Prior probabilities:
+P(Omega1) = 2/3 (Sea bass)
+P(Omega2) = 1/3 (Salmon)
+
+
+Class conditional probabilities (likelihood) for x = 14:
+P(x=14 | Omega1) ≈ 0.18
+P(x=14 | Omega2) ≈ 0.02
+
+
+Posterior probabilities:
+P(Omega1 | x=14) ≈ 0.92
+P(Omega2 | x=14) ≈ 0.08
+
+
+The calculations show that given a fish with length 14, there's a 92% probability it's a Sea bass and an 8% probability it's a Salmon. These probabilities are calculated using Bayes' theorem, considering the prior probabilities and the class conditional probabilities (likelihood) based on the length feature.
+
+
+
+P(Omega1 | x=14) ≈ 0.92
+P(Omega2 | x=14) ≈ 0.08
+
+Can you show its calculation?
+
+Based on the information provided in the context, I can show the calculation for P(Omega1 | x=14) ≈ 0.92 and P(Omega2 | x=14) ≈ 0.08 as follows:
+Given:
+P(Omega1) = 2/3 ≈ 0.667
+P(Omega2) = 1/3 ≈ 0.333
+P(x=14 | Omega1) ≈ 0.18
+P(x=14 | Omega2) ≈ 0.02
+Using Bayes' theorem:
+P(Omega1 | x=14) =  / P(x)
+P(Omega2 | x=14) =  / P(x)
+Where P(x) = P(x=14 | Omega1) * P(Omega1) + P(x=14 | Omega2) * P(Omega2)
+Calculating:
+P(x) = 0.18 * 0.667 + 0.02 * 0.333 ≈ 0.12 + 0.0067 ≈ 0.1267
+Now:
+P(Omega1 | x=14) = (0.18 * 0.667) / 0.1267 ≈ 0.92
+P(Omega2 | x=14) = (0.02 * 0.333) / 0.1267 ≈ 0.08
+These calculations match the given results in the context.
+
+
+
+
+What is probabilty of error and its equation and what is the error in salmon and sea bass example?
+	Based on the context provided, here's the answer to Asha N's question:
+The probability of error is defined as the minimum of the posterior probabilities for each class. The equation for probability of error given a particular feature value X is:
+P(error|X) = min
+In the salmon and sea bass example, for a fish with length X = 14:
+P(Omega1|X) = 0.92 (probability it's a sea bass)
+P(Omega2|X) = 0.08 (probability it's a salmon)
+Therefore, the probability of error at X = 14 is:
+P(error|X=14) = min = 0.08 or 8%
+This means there's an 8% chance of misclassifying a fish with length 14 using this classifier.
+
+
+
+
+What prof explained about error  function in graph?
+Based on the context, the professor explained that the error function in the graph would be the minimum of the posterior probabilities for the two classes (omega 1 and omega 2) at each point. He demonstrated this by drawing the error function on the graph, showing it as the lower envelope of the two probability curves. The professor pointed out that the error is highest (around 0.5) where the two probability curves intersect, which occurs at feature lengths of approximately 9.8 and 11.2. He emphasized that the classifier needs to be aware of these high-error regions and consider potential mitigation strategies.
+
+
+
+What topics have been discussed?
+Based on the context provided, the main topics discussed in this meeting were:
+
+Support Vector Machines (SVM)
+Bayesian classification
+
+The professor first reviewed Support Vector Machines, mentioning he would do a demonstration on SVM in the next session.
+Then the majority of the lecture focused on introducing Bayesian classification concepts, including:
+
+Prior probability
+Class conditional probability (likelihood)
+Posterior probability
+Evidence (normalization factor)
+Base theorem and its application in classification
+An example of classifying fish (sea bass vs salmon) using Bayesian methods
+Error functions in Bayesian classification
+
+The professor used several examples and visualizations to explain these concepts, particularly focusing on a two-class classification problem.
+
+
+
+
+
+What Prof explained about Cost?
+Based on the context, the professor explained that:
+
+
+In Bayesian classification, there can be different costs associated with making incorrect classifications.
+
+
+He gave an example comparing classifying fish species (sea bass vs salmon) versus classifying oysters and sea bass:
+
+
+Misclassifying sea bass as salmon or vice versa has a relatively low cost/impact.
+
+
+However, misclassifying an oyster (which may contain a pearl) as a sea bass could have a much higher cost.
+
+
+
+
+These different costs for false positives and false negatives can be accounted for in Bayesian classification using what's called a "risk function".
+
+
+The risk function considers the costs of different types of classification errors when making decisions.
+
+
+The professor indicated this topic of cost and risk functions would be covered in more detail later in the course.
+
+
+
+
+
+What prof told about Risk function?
+Based on the context, the professor mentioned the following about the risk function:
+
+
+It will be introduced as a concept in a future lecture.
+
+
+The risk function considers the cost or consequences of making incorrect classifications.
+
+
+It takes into account false positives and false negatives.
+
+
+It's especially important for cases where misclassification can have serious consequences, like in medical diagnosis.
+
+
+The risk function helps evaluate the cost of different classification actions.
+
+
+It allows for assigning different weights to different types of errors.
+
+
+It's related to the concept of a loss function, which states how costly each action is.
+
+
+The professor indicated they would cover the risk function in more detail in an upcoming lecture, either the next day or in a future session.
+
+
+
+
+What prof told about Bayes decision theorem slide
+Based on the context provided, the professor did not specifically discuss a slide titled "Bayes decision theorem". The lecture covered various aspects of Bayesian classification, including prior probabilities, class conditional probabilities (likelihood), posterior probabilities, and evidence. However, there was no explicit mention of a "Bayes decision theorem" slide. The professor focused on explaining concepts related to Bayesian classification using examples of classifying fish (sea bass vs salmon) based on features like length. If there was a specific slide on Bayes decision theorem, it was not discussed in the portion of the lecture provided in the context.
+
+
+
+What was Subhash's question and its answer?
+Subhash's question and its answer were:
+Question: Subhash asked how to accommodate scenarios where the expected outcomes (sea bass and salmon) are not found, and instead other types of fish are encountered.
+Answer: The professor suggested that in such cases, you could use a different classifier or include more classes in the classification system to account for other types of fish. He also mentioned that Bayesian classifiers are commonly used for binary classification problems like spam email detection (spam vs. not spam).
+What was the question before this?
+Before the question about unexpected fish types, Subhash asked:
+Question: Can we accommodate probabilities for outcomes we are anticipating but don't match the expected categories, such as finding an oyster when classifying between sea bass and salmon?
+Answer: The professor explained that the oyster example was given in the context of discussing cost or loss functions. He clarified that if they were classifying between sea bass and oyster, they would need to account for false classifications using a loss function or cost function. In the case of sea bass and salmon, he assumed the costs of misclassification were the same and not a big deal.
+What was the last topic discussed before the Q&A session?
+The last topic discussed before the Q&A session was about generalizing the preceding ideas of Bayesian classification. Specifically, the professor mentioned:
+
+Using more than one feature
+Using more than two states of nature (classes)
+Allowing actions other than just deciding on a classification, such as the possibility of rejection or refusing to make a decision in close or difficult cases
+Introducing a loss function, which states how costly each action or misclassification is
+
+The professor also mentioned that these topics would be covered in more detail in future lectures, including the concept of a risk function.
+Please summarise the key points discussed in the lecture.
+The key points discussed in the lecture were:
+
+
+Introduction to Bayesian classification, using the example of classifying fish (sea bass and salmon) based on features like length.
+
+
+Explanation of key concepts:
+
+Prior probability: Based on past experience or domain knowledge
+Class conditional
+
+Subhash's question was about how to accommodate scenarios where the expected outcomes (sea bass and salmon) are not found, and instead other types of fish are encountered.
+The answer provided by the professor was:
+
+You can use more classes in the Bayesian classifier to account for other possibilities.
+The example can be expanded from 2 classes (Omega 1 and Omega 2) to include additional classes (e.g. Omega 3).
+The probabilities would then be adjusted so that P(Omega 1) + P(Omega 2) + P(Omega 3) + ... = 1
+The professor noted that they kept the example simple with just 2 classes for easier understanding, but the concept can be extended to multiple classes.
+
+The professor emphasized that in real scenarios, you would accommodate other possibilities by adding more classes to the classification model.
+
+
+
+What topics have been discussed?
+Based on the context provided, the main topics discussed in this meeting were:
+
+Support Vector Machines (SVM)
+Bayesian classification
+
+The professor briefly reviewed SVM concepts from a previous class and mentioned he would do a demonstration on SVM in the next session.
+Then he moved on to introduce Bayesian classification, covering concepts like:
+
+Prior probability
+Class conditional probability (likelihood)
+Posterior probability
+Evidence (normalization factor)
+
+He used an example of classifying fish (sea bass vs salmon) to explain these concepts. The professor also briefly mentioned that they would discuss risk/loss functions in future lectures.
+इस बैठक में मुख्य रूप से निम्नलिखित विषयों पर चर्चा की गई:
+
+सपोर्ट वेक्टर मशीन (SVM)
+बेसियन वर्गीकरण
+
+प्रोफेसर ने पिछली कक्षा के SVM अवधारणाओं की संक्षिप्त समीक्षा की और उल्लेख किया कि वे अगले सत्र में SVM पर एक प्रदर्शन करेंगे।
+फिर उन्होंने बेसियन वर्गीकरण का परिचय देना शुरू किया, जिसमें निम्नलिखित अवधारणाएँ शामिल थीं:
+
+पूर्व संभाव्यता
+वर्ग सशर्त संभाव्यता (संभावना)
+पश्च संभाव्यता
+साक्ष्य (सामान्यीकरण कारक)
+
+उन्होंने इन अवधारणाओं को समझाने के लिए मछली (समुद्री बास बनाम सै
+
+
+Based on the context provided, the main topics discussed in this meeting were:
+
+
+Support Vector Machines (SVM)
+
+Brief recap of previous SVM concepts
+Mention of a demonstration session on SVM planned for the next day
+
+
+
+Bayesian Classification
+
+Introduction to Bayesian classification concepts
+Explanation of prior probability, likelihood, evidence, and posterior probability
+Example using fish classification (sea bass vs salmon)
+Discussion on class conditional probabilities and probability density functions
+Explanation of how to calculate posterior probabilities and make classifications
+
+
+
+Assignment Information
+
+Brief discussion about the ongoing assignment
+Clarifications on submission requirements (group work, file formats, etc.)
+
+
+
+The meeting was primarily focused on theoretical concepts, especially Bayesian classification, with some administrative discussions about assignments towards the end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

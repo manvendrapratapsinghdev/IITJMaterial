@@ -1,0 +1,710 @@
+Catch me up on this meeting.
+Here's a catch-up on the meeting:
+This is a Machine Learning class meeting for PGD AI Batch-2. The key points discussed were:
+
+
+Some attendance issues were raised by student HIMADRI DAS about Feb 9th exam day
+
+
+Students asked about immersion program dates (not yet finalized)
+
+
+Professor H Akol apologized for being late and missing yesterday's session due to being unwell
+
+
+Main announcements:
+
+Assignment 2 will be released soon, focusing on unsupervised learning and neural networks
+Students can work in groups of 2-3 for this assignment
+There will be 10-12 open-ended problems to choose from
+
+
+
+The lecture began covering:
+
+Quick recap of Bayesian classification
+Moving to start K-means clustering and unsupervised learning
+Professor plans to give a demo on K-means coding
+
+
+
+The class was still in progress when the context ends, with the professor explaining unsupervised learning concepts.
+
+
+
+
+
+What is Unsuperwised learning?
+Based on the context, Unsupervised learning is when you work with data that has no labels or target variables. For example:
+
+You might have hundreds of images but you're not telling the algorithm which image is a cat or dog
+You might have digit images (like MNIST dataset) but you're not telling the algorithm which number is 5, 6, or 7
+
+In unsupervised learning, since there are no labels, the main task is to cluster the data. Some popular algorithms in unsupervised learning include K-means clustering and principal component analysis (PCA).
+
+
+
+
+What are the algorithm covered in Unsuperwised learning?
+Based on the context, Professor mentioned two popular algorithms in unsupervised learning:
+
+K-means Clustering
+Principal Component Analysis (PCA)
+
+The Professor mentioned that PCA will have more mathematical components, while K-means clustering is easier and will be covered first in the lecture.
+
+
+
+How to cluster in iris data? What prof told?
+From the context, prof explained that in iris data clustering (unsupervised learning):
+
+Data comes without labels - just raw data points
+Need to decide how many clusters to make (2,3,4 etc)
+K-means clustering algorithm is used
+Algorithm works on simple distance formula (like what we study in 8th-10th standard)
+
+Prof told this is simpler than PCA and will show demo code later to help students try assignment questions.
+That's all specific info given about iris data clustering in the context. Detailed clustering process was not explained in the provided meeting transcript.
+
+
+
+What are the applications of clustering?
+Based on the context, the professor mentioned several applications of clustering:
+
+Market segmentation - grouping customers based on data like age groups for targeted advertising
+Social network analysis
+Astronomical data analysis
+Optimizing computing network
+
+The professor also explained that clustering is useful when you want to create groups of similar features or attributes to use that information, particularly in cases where you have unlabeled data and need to organize it into meaningful groups.
+
+
+
+What are the applications discussed?
+Based on the context, the following applications of clustering/unsupervised learning were discussed:
+
+Market segmentation
+Social network analysis
+Astronomical data analysis
+Customer segmentation
+Data analysis
+Dimensionality reduction
+Feature engineering
+Anomaly detection
+Semi-supervised learning
+Search engines
+Image segmentation
+
+The professor also mentioned examples like using clustering for advertising based on age groups and Google's algorithms for pushing ads based on user interests.
+
+
+
+
+What prof explained about K means Clustering - Lloyd Forgy Algorithm?
+Based on the context, Prof. H Akol explained the following about K-means Clustering (Lloyd Forgy Algorithm):
+
+It is a simple algorithm based on distance formula that students might have studied in 8th or 10th standard
+It is used for unsupervised learning where data has no labels
+Main purpose is to create clusters/groups from unlabeled data
+Key challenge is determining how many clusters (K) to create from the data
+Applications include:
+
+Market segmentation
+Social network analysis
+Astronomical data analysis
+Customer segmentation
+Data analysis
+Image segmentation
+Search engines
+
+
+
+The professor mentioned it's from the 1980s and is quite simple, though the complete explanation of the algorithm's working was not completed in the given context as the lecture appears to have been continuing further.
+
+
+
+
+
+
+
+What prof told about K means Decision Boundaries?
+From the context, Prof explained that K-means creates decision boundaries that form what is called a Voronoi diagram. These boundaries divide the data into different zones or regions using polygons (like quadrilaterals or other shapes with 5-6 sides). Each point can only belong to one cluster at a given time, even if they appear near the boundary between clusters. The boundaries help separate the data into distinct clusters, where points within each zone are grouped together based on their similarity and distance to the cluster centroid (marked with X symbols in the diagram).
+
+These applications were specifically mentioned in the meeting transcript.
+
+
+
+What is centroid?
+Based on the context, a centroid is the average coordinate point for a cluster of data points. For a cluster with M data points, it is calculated as the average of all x1 coordinates and x2 coordinates of points belonging to that cluster. In the visual representation shown in the context, centroids are marked with X symbols at the center of each cluster region.
+The formula mentioned in the context for centroid is:
+x1_bar = (x1_1 + x1_2 + ... + x1_M)/M
+x2_bar = (x2_1 + x2_2 + ... + x2_M)/M
+The centroid is then represented as the point (x1_bar, x2_bar).
+
+
+What topics have been discussed?
+Based on the context, the following topics were discussed:
+
+Administrative matters about attendance and immersion program dates
+Introduction to unsupervised learning
+K-means clustering algorithm
+Brief recap of Bayesian classification
+Discussion about upcoming Assignment 2 which will cover unsupervised learning and neural networks
+Applications of clustering like market segmentation, social network analysis, and astronomical data analysis
+Hard clustering vs soft clustering
+Introduction to cluster centroids and Voronoi diagrams
+Brief mention of coding implementation using scikit-learn
+
+The professor mentioned that Bayesian classification's risk function topic was postponed to focus on K-means clustering to help students with their upcoming assignment.
+
+
+
+What is Voronoi diagrams?
+Based on the context, a Voronoi diagram is used in mathematics to classify regions or create partitions of similar values. It creates boundaries in a dataset using polygons (shapes with 5-6 sides). In K-means clustering, Voronoi diagrams show different zones or boundaries between clusters, helping to visualize how the data points are separated into distinct regions.
+The professor showed an example where the Voronoi diagram created demarcation zones separating data points into different clusters, with each zone containing a cluster centroid (marked with X symbols).
+
+
+
+what prof mention of coding implementation using scikit-learn?
+Based on the context, the professor mentioned two main things about scikit-learn implementation:
+
+There is a dataset called 'make_blobs' that can be used
+Need to import K-means, and it's as simple as that
+
+The professor also mentioned he would show some code examples and variations for visualizations if time permits during the lecture, but the specific code details were not covered in the provided context.
+The main focus was on explaining that K-means is a simple algorithm that requires specifying K as a hyperparameter (number of clusters) when implementing it.
+
+
+
+
+What prof explained about finding distance with centroid? Why and how it is done?
+Based on the context, here's how the professor explained finding distance with centroids:
+The process involves:What are the symbolic representations discussed?
+
+First, randomly initialize centroids (marked as X) in the space
+For each data point, find its distance from each centroid
+Assign the point to the cluster whose centroid has the least distance from that point
+After assigning all points, calculate new centroid position using formula: Summation Xi/M (average of all points in that cluster)
+Repeat the process until centroid positions don't change much between iterations
+
+The professor mentioned this is done to properly classify points into clusters. For example, if there are red and blue clusters, each point will be assigned to either red or blue cluster based on which centroid it's closer to. This process helps in creating proper groupings of similar data points.
+The distance calculation is a basic part of K-means clustering algorithm and uses simple distance formula that students might have learned in 8th or 10th standard mathematics.
+
+
+
+
+What is the formula give to calculate centroid in each iteration?
+Based on the context, for each cluster, the centroid is calculated using this formula:
+Centroid = Summation of Xi / M
+Where:
+
+Xi represents all points in that cluster
+M is the number of points in that cluster
+
+This calculation is done separately for each coordinate (x1, x2) of the points in the cluster. The formula is mentioned when Professor Akol explains the centroid calculation for blue and red clusters during the iterative process of K-means clustering.
+
+
+
+
+What are the steps in Pseudo code?
+Based on the context, here are the steps of the pseudo code for K-means clustering:
+
+Randomly initialize centroids
+Assign points closest to respective centroid
+Move centroid based on new cluster
+Repeat steps 2 and 3 until convergence
+
+The professor mentions that these steps will eventually lead to the cluster centroids reaching their respective places and the algorithm will converge.
+
+
+
+
+
+
+What are the symbolic representations discussed?
+Based on the context, the symbolic representations discussed are:
+
+K - represents the number of clusters
+μ (mu) - represents the cluster centroid
+X₁ to Xₘ - represents the training set
+M - represents number of points
+C(i) - appears to be mentioned but its specific representation is not clearly defined in the context
+X̄ (X bar) - represents centroid coordinates
+
+These symbols are commonly used notations in K-means clustering algorithm discussions.
+
+
+
+What Prof explained about Step 2 cluster assignment pseudo code?
+From the context, Prof explained that in Step 2 of the K-means clustering pseudo code:
+
+For each point in the dataset (looping over i = 1 to m points), they create a cluster index variable C(i)
+For each point, they calculate the distance between that point and all cluster centroids (from 1 to K clusters)
+The point is then assigned to the cluster centroid that has the minimum distance from it
+This is represented mathematically using double norm distance formula
+
+The professor was in the middle of explaining the full mathematical notation when the context ends, so the complete explanation of Step 2 is not available in the given transcript.
+
+
+From the context, Prof explained that in Step 2 of the K-means clustering algorithm:
+
+They loop over all points (i = 1 to m, where m is number of points)
+For each point, they create a cluster index variable C(i)
+They calculate the distance between each point and all cluster centroids
+Each point gets assigned to the cluster whose centroid has the minimum distance from that point
+
+The professor was explaining the mathematical notation for this step using double norm distance formula but did not complete explaining the full formula in the given context.
+This step essentially assigns each data point to its closest centroid based on distance calculations.
+
+
+
+
+What Prof Explained about Move centroid Pseudo code?
+From the context, Prof explained that for moving the centroid (3rd step in pseudo code):
+
+
+For each cluster index k (from 1 to K), find the average of all points assigned to that particular cluster to update the centroid position.
+
+
+He gave an example:
+
+
+
+
+If points x1, x5, x6, x10 belong to cluster 2, then:
+mu2 = (x1 + x5 + x6 + x10)/4
+
+
+Similarly, if points x2, x3, x4, x7, x8, x9 belong to cluster 1, then:
+mu1 = (x2 + x3 + x4 + x7 + x8 + x9)/6
+
+
+The professor mentioned this is a simple algorithm that uses distance formula, creates an index variable C to track which sample belongs to which cluster, and updates the centroids based on average of points in each cluster.
+
+
+
+
+atch me up on K means algorithm?
+Here's a quick catch-up on K-means algorithm from the meeting:
+K-means is a simple clustering algorithm that works like this:
+
+You randomly place K centroids (cluster centers) in your data space
+For each data point, assign it to the nearest centroid based on distance
+Move the centroids to the average position of all points assigned to it
+Repeat steps 2-3 until centroids stop moving significantly
+
+Key points:
+
+It's an unsupervised learning method (no labeled data needed)
+You must specify K (number of clusters) beforehand
+Each point can only belong to one cluster at a time
+Uses simple distance formula to make clusters
+Used for things like market segmentation, social network analysis, and image segmentation
+
+The algorithm keeps iterating until it converges - meaning the centroids don't move much between iterations anymore.
+
+
+
+
+
+
+Catch me up on Pseudo code explanation?
+From the context, the professor explained the pseudo code for K-means clustering in these main steps:
+Step 1: Randomly initialize centroids
+Step 2: Assign points closest to respective centroid
+
+For each data point (i=1 to m), calculate distance to each centroid
+Assign point to cluster with minimum distance using cluster index C(i)
+
+Step 3: Move centroid based on new cluster
+
+Calculate average of all points assigned to each cluster
+Update centroid position to this new average
+
+Step 4: Repeat Steps 2 and 3 until convergence
+The professor was explaining the mathematical notation when the context ended, but these were the core steps of the algorithm he outlined in the pseudo code explanation.
+
+
+
+
+What is Silabarasam's question? What prof answered?
+Based on the context, Silambarasan's question was about how both centroids and points are shifting simultaneously in the K-means algorithm, as he couldn't understand from the algorithm explanation how both parameters (centroids and points) were moving when neither was constant.
+The professor answered by explaining:
+
+First, centroids (Mu1, Mu2) are randomly initialized anywhere in space
+Then for each point, distances are calculated from all centroids
+Points are assigned to closest centroid using index C (cluster assignment step) - this is where points "switch" clusters
+New centroids are calculated based on the new point assignments
+This process repeats iteratively
+
+The professor emphasized that since initial centroids are random, points will naturally switch between clusters during assignments, and new centroid positions are calculated after each reassignment of points.
+
+
+
+
+
+What were the questions asked? What were the answers?
+Based on the context, here are the main questions and answers discussed:
+Questions asked:
+
+
+A student asked if Bayesian formula is the most important thing for classification
+Answer: Professor said it's not one of the most important but one of the most fundamental concepts
+
+
+A student asked about how both centroids and points shift in K-means clustering
+Answer: Professor explained that centroids are randomly initialized first, then points are assigned to nearest centroid based on distance calculations, then centroids are recalculated based on mean of assigned points
+
+
+A student asked about stopping condition for K-means algorithm
+Answer: Professor explained algorithm stops when centroids stop moving, which happens when cluster assignments become stable
+
+
+A student asked what happens when number of clusters is not defined
+Answer: Professor explained that number of clusters must be defined as a parameter, though there are methods to try different numbers of clusters to find optimal clustering
+
+
+The context shows these were the main question-answer exchanges during the machine learning lecture focusing on K-means clustering algorithm.
+
+
+
+
+What is Lakshay's question and its answer?
+Lakshay asked about what happens when we don't define the number of clusters to the K-means algorithm.
+The professor clarified that:
+
+You must provide/define the number of clusters - it's a required parameter
+However, if you want to find the optimal number of clusters, you can ask the algorithm to show segmentation for different numbers (e.g. 2-10 clusters) and then choose which works best
+The professor gave an example of T-shirt sizes - you need to decide if you want 3 sizes (S,M,L) or 5 sizes (XS,S,M,L,XL) based on your market needs
+There are methods to help determine what number of clusters might give better solutions, which would be covered later in the slides
+
+So in summary, specifying the number of clusters is mandatory, but there are ways to analyze what number of clusters works best for your specific use case.
+
+
+
+
+What prof explained about cost function of Kmeans algorithm?
+Based on the context, the professor explained that for K-means:
+
+
+The cost function (J) measures the sum of distances between every data point and its assigned centroid
+
+
+Unlike supervised learning where cost functions use labeled data, K-means cost function is based on unlabeled samples
+
+
+For each data point Xi, we calculate its distance from its assigned cluster centroid Mu(Ci) and sum these distances over all M data points
+
+
+The goal is to minimize this total distance (J), though J will never be zero since points will always have some distance from their centroids
+
+
+Like other machine learning algorithms, we want to minimize the cost function but not necessarily get it to zero, similar to how we don't always want zero training error
+
+
+The professor noted this is a simple cost function that they had already been discussing indirectly while explaining the algorithm's steps.
+
+
+
+
+What prof explained about Random Initialization?
+Based on the context, Prof explained that Random Initialization is a starting point for K-means clustering where centroids are randomly placed in the data space. He mentioned that:
+
+Many algorithms, including neural networks, start with random number initializations
+Random initialization should be done carefully - centroids should not all be initialized in the same area
+No random number generator would typically generate all centroids in one place
+Since it's random, the algorithm will eventually converge to the right spot through iterations
+The number of clusters must be specified beforehand and should be strictly less than the number of data points
+
+The professor was about to explain more about random initialization issues but the context ends before completing that explanation.
+
+
+
+
+
+What were the questions asked and What were the answers?  Keep the answers explanatory.
+Here's a catch-up on the meeting:
+This is a Machine Learning class meeting for PGD AI Batch-2. The key points discussed were:
+
+
+Some attendance issues were raised by student HIMADRI DAS about Feb 9th exam day
+
+
+Students asked about immersion program dates (not yet finalized)
+
+
+Professor H Akol apologized for being late and missing yesterday's session due to being unwell
+
+
+Main announcements:
+
+Assignment 2 will be released soon, focusing on unsupervised learning and neural networks
+Students can work in groups of 2-3 for this assignment
+There will be 10-12 open-ended problems to choose from
+
+
+
+The lecture began covering:
+
+Quick recap of Bayesian classification
+Moving to start K-means clustering and unsupervised learning
+Professor plans to give a demo on K-means coding
+
+
+
+The class was still in progress when the context ends, with the professor explaining unsupervised learning concepts.
+
+
+Based on the context, here are the key questions asked and their answers from the meeting:
+
+
+Q: What is the disadvantage of K-means algorithm?
+A: If all centroids are initialized in the same area/region, the algorithm may get stuck and not work properly. Random initialization across the domain is important.
+
+
+Q: What is the stopping condition for the algorithm?
+A: The algorithm stops when the centroids stop moving, which happens when there are no more points being added or removed from clusters. Practically, when the difference between previous and current centroid positions becomes very small.
+
+
+Q: How are centroids calculated when number of clusters is not defined?
+A: The algorithm requires number of clusters to be defined. However, you can run the algorithm multiple times with different numbers of clusters (2-10) and then choose the best segmentation for your needs.
+
+
+Q: What is the maximum number of clusters possible for M data points?
+A: M-1 clusters are theoretically possible, as having M clusters (every point its own cluster) wouldn't make practical sense.
+
+
+Q: How to overcome the issue of poor centroid initialization?
+A: Run the algorithm multiple times with different random initializations and compare results to find the best solution.
+
+
+Q: How are region boundaries defined in K-means?
+A: The boundaries (Voronoi diagram) are automatically determined by the algorithm based on distance - any point closer to a particular centroid than other centroids belongs to that cluster's region.
+
+
+
+
+What prof explained about Intertia?
+From the context, Prof explained that Inertia is the sum of square distances between instances and their closest centroids. He mentioned it's basically M (number of data points) multiplied by J (cost function). Mathematically, it's represented as summation from i=1 to M of the square distance between instances and their closest centroids. The goal is to minimize both the cost function and inertia. He also noted that while he uses capital I to represent inertia, other books might use different symbols.
+
+
+
+
+What prof explained about  Mini batch?
+From the context, the professor only briefly mentioned Mini Batch K-means but did not explain it in detail. He only mentioned that Mini Batch will work on a smaller portion of the dataset and that it takes small RAM. The meeting transcript does not provide more detailed information about Mini Batch.
+
+
+
+What is Elbow Method?
+Based on the context, the Elbow Method is a technique to determine the optimal number of clusters (K) in K-means clustering. It works by:
+
+
+Plotting the relationship between the number of clusters (K) vs inertia (sum of squared distances between instances and their closest centroids)
+
+
+Looking for an "elbow point" or inflection point in the graph where there is a clear change in the slope of the line
+
+
+This elbow point suggests the ideal number of clusters to use
+
+
+The context shows this is used as one of the methods to help choose the right number of clusters, though it's noted there is no definitive "best" answer and the final choice depends on the specific needs and visual inspection of the data.
+The full details of the Elbow Method were not completed in the context as the professor indicated he would continue discussing it in the next session.
+
+
+What prof explained about Code she shown in colab notebook?
+From the context, Prof showed a code example in a notebook that included:
+
+A dataset of Nigerian songs
+Data visualization using box plots to see feature distributions
+Implementation of K-means clustering where:
+
+They specified 3 clusters
+Used 208 data points
+Showed Silhouette score (around 0.53)
+
+
+Demonstrated the elbow method plotting
+Used libraries like K-means and showed basic data preprocessing
+
+Prof mentioned she didn't explain the code in detail due to time constraints but emphasized it was self-explanatory, mainly requiring the K-means library and some data preprocessing/visualization. She said she would cover remaining concepts like Silhouette score in the next class.
+The code demonstration was brief and done in the last 5 minutes of the class mainly to give students an idea of how to implement K-means clustering practically.
+
+
+
+What prof explained about  accuracy?
+From the context, Prof explained that in K-means clustering (which is an unsupervised learning method), accuracy is not measured in the traditional sense since there are no labels to compare against. When he mentions accuracy, he suggests it is more like a function of inertia (which measures the sum of squared distances between instances and their closest centroids). However, he doesn't provide a detailed explanation of accuracy measurement since K-means clustering focuses more on optimizing the clustering arrangement rather than measuring accuracy against known labels.
+The key point is that since this is unsupervised learning without labeled data, measuring accuracy in the conventional way is not applicable.
+
+
+
+What was th question About typical training dataset size for clustering (by Subhranil Bala) and what is answer?
+Based on the context, Subhranil Bala asked about what typical training dataset size should be used for creating clusters - whether to use 60-80% of data or all data.
+Professor H Akol answered that for clustering, it is recommended to use all the data because:
+
+There is no concept of overfitting in clustering as there are no labels to train on
+There is nothing to test it against since it's unsupervised learning
+There is no reason to remove any data from the dataset
+
+The professor emphasized that while people might use the word "training" in K-means clustering, they are actually just referring to creating the cluster centroids, not training in the supervised learning sense.
+
+
+About the objective function in K-means (by Himanshu Kumar) what was the question and answer?
+Based on the context, Himanshu Kumar asked about the objective function in K-means, specifically questioning why we are minimizing distances when both data points and centroids are changing in each iteration.
+Professor explained that:
+
+The reference point is always the centroid
+When you increase the number of centroids, you give all points an opportunity to be closer to a centroid
+This is why the inertia (objective function) drops - because every point now has the chance to be closer to more centroids
+For example, if you go from 2 centroids to 3 centroids, points that were previously far from centroids now have another centroid they could be closer to, thus reducing the overall distance sum (inertia)
+
+The professor illustrated this with an example showing how adding more centroids reduces the distance contribution of points that were previously far from centroids, thereby minimizing the objective function.
+Himanshu Kumar indicated he understood this explanation by saying "Okay, I got it. Yes."
+
+
+
+
+What were the questions asked?
+Based on the context, these were the main questions asked during the meeting:
+
+About attendance marking on Feb 9th (by Himadri Das)
+About immersion program dates (by Rishi Sood)
+Whether Bayesian formula is most important for classification (by Shounak)
+About choosing centroid points and cluster boundaries (by multiple students)
+About stopping condition for K-means iterations (by Apurba Pandey)
+About defining number of clusters when not specified (by Lakshya Vashisth)
+About typical training dataset size for clustering (by Subhranil Bala)
+About the objective function in K-means (by Himanshu Kumar)
+
+Most questions were focused on understanding the K-means clustering algorithm, its implementation and technical aspects.
+
+
+
+
+What topics have been discussed?
+Based on the meeting transcript, the following topics were discussed:
+
+K-means clustering algorithm and its implementation
+Unsupervised learning concepts
+Cluster centroids and how they are calculated
+Random initialization of centroids and potential issues
+Cost function (inertia) in K-means clustering
+Elbow method for determining optimal number of clusters
+Brief introduction to Silhouette coefficient (not covered in detail)
+Practical demonstration using Python code with a dataset of Nigerian songs
+Brief discussion about upcoming Assignment 2 which will cover unsupervised learning and neural networks
+
+The professor mentioned that Bayesian classification was left to be covered in a future session.
+
+
+
+
+
+What is Amit's question and what is the answer?
+From the context, Amit Nagar asked two main questions:
+
+
+He wanted to confirm his understanding that in K-means clustering, they have to calculate the distance of each point with each cluster centroid in every iteration.
+
+
+He noted that this seems computationally expensive.
+
+
+Professor H Akol's answer was:
+
+He confirmed that distances are calculated between points and cluster centroids
+Regarding computational expense, he explained that any algorithm becomes computationally expensive with large datasets, even simple linear regression
+He clarified that scaling up for large datasets is a separate computing/programming challenge and not an algorithm problem
+The core algorithm principles remain the same regardless of scale
+For large scale implementations, specialized tools like GPUs and libraries like TensorFlow can be used to handle the computational requirements efficiently
+
+
+
+Catch me up on this meeting.
+This was a machine learning class session focused on K-means clustering, which is an unsupervised learning algorithm. Here are the key points:
+
+
+Professor H Akol taught about K-means clustering basics and how it works by:
+
+Randomly initializing cluster centroids
+Assigning points to nearest centroids
+Moving centroids based on assigned points
+Repeating until convergence
+
+
+
+Key concepts covered:
+
+Difference between supervised and unsupervised learning
+Cost function/inertia in K-means
+Elbow method for choosing number of clusters
+Voronoi diagrams for visualizing clusters
+
+
+
+The professor also:
+
+Showed code examples using Python
+Mentioned Assignment 2 will be released soon, allowing groups of 2-3 students
+Reminded that today (submission deadline) is last day to submit without late penalties
+Noted that after March 7th no submissions will be accepted without special permission
+
+
+
+The class had active participation with students asking questions throughout about the algorithm implementation and assignment logistics.
+
+
+
+
+What is Amit's question and what is the answer?
+From the context, Amit asked two main questions:
+
+
+About computational expense of K-means clustering since it needs to calculate distances between each point and each cluster centroid in every iteration. The professor answered that while it can be computationally expensive with large datasets, this is true for any algorithm with large data. The solution lies in how you scale up the implementation using things like GPU computing, not in changing the core algorithm.
+
+
+About whether the distance between centroid and points could be a hyperparameter. The professor clarified by explaining that in K-means:
+
+
+
+Parameters are things the algorithm needs to find (like which cluster each point belongs to)
+Hyperparameters are things the user needs to define (like number of clusters K)
+The distance calculations are part of the cost function which involves parameters, not hyperparameters
+
+The professor emphasized that cost functions generally deal with parameters rather than hyperparameters, though they may have some small hyperparametric elements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

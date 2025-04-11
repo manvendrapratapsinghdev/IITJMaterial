@@ -1,0 +1,37 @@
+Subhash's question and the professor's response can be summarized as follows:
+
+Subhash's question:
+Subhash asks about data representation and its impact on the decision tree algorithm. He specifically inquires:
+1. Is the entropy or information gain calculation dependent on how the data is presented?
+2. Are there any techniques or initial deductions applied to represent the data in a more tabular or other form to get more accurate results when applying the decision tree?
+3. Can they combine the algorithm discussed yesterday (likely referring to CART) with the ID3 algorithm to first categorize the data and then calculate information gain?
+
+Professor's response:
+1. For categorical data (non-numeric), there isn't much preprocessing that can be done. The main thing is to ensure all attributes have values filled in.
+2. For numerical datasets, you can sometimes rotate or visualize the data differently, but this doesn't apply to categorical data.
+3. The professor clarifies that yesterday's algorithm (CART) and today's algorithm (ID3) are two different methods for creating decision trees:
+   - CART uses Gini impurity as the metric
+   - ID3 uses entropy and can handle more than binary splits
+4. To compare which algorithm is better, you would need to run both and analyze their outputs.
+5. The choice of algorithm depends on the specific problem and dataset.
+
+The professor emphasizes that these are different approaches to creating decision trees, not steps to be combined in a single process.
+
+
+
+Based on the context, Chandan's question and the professor's response can be summarized as follows:
+
+Chandan's question:
+1. He first sought confirmation about the process of calculating information gain, specifically mentioning the example with overcast, sunny, and rain.
+2. He then asked if there's any possibility of getting negative values when calculating the Information Gain (IG).
+
+Professor's response:
+1. The professor confirmed Chandan's understanding of the information gain calculation process.
+2. Regarding the possibility of negative IG values:
+   - The professor initially stated that it's likely not possible, saying "Mostly it is No. 95% No."
+   - However, he admitted he wasn't entirely certain and said he would need to double-check.
+   - He noted down the question: "Can IG ever be negative?"
+   - The professor mentioned that mathematically, it seems unlikely, but he would verify this.
+   - He promised to remind himself to check and provide an answer in the next class.
+
+The professor appreciated the question, calling it a "good question," and acknowledged that he needed to confirm his understanding of this specific point.

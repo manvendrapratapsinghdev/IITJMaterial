@@ -1,0 +1,607 @@
+Catch me up on this meeting.
+Here's a catch-up on the meeting:
+The meeting was about AI coursework and administrative matters. Key points:
+
+Discussion about LMS timing issues - need to change class timing from 2 PM to 2:30 PM
+Students raised concerns about delayed quiz scores (21 days pending)
+Exam dates shown in LMS are tentative, with final confirmation pending from professors
+Campus immersion discussion - may happen in May or December, with May being the primary option. It's mandatory unless there are health emergencies
+Confirmation that exams will be online as originally promised
+Professor Debasis Das joined later and taught about:
+
+Heuristic search concepts
+Differences between Greedy search and A* search
+Weighted A* search
+Algorithm comparisons focusing on completeness, optimality, time and space complexity
+
+
+
+The meeting was a mix of administrative queries and technical AI course content.
+
+
+
+
+What prof told about summary of comparision  of search strategies?
+From the context, Prof mentioned that when comparing different search strategies (like BFS, DFS, Uniform cost search, IDA), they focus on 4 main parameters:
+
+If it is complete or not
+If it is optimal or not
+Time complexity
+Space complexity
+
+For time complexity specifically, they look at:
+
+Maximum branching factor of size
+Depth
+Maximum length
+
+Prof suggested to go through a comparison table in the slides that shows these differences between search strategies. He mentioned this could be important for short answer questions or MCQ type questions.
+
+
+
+
+
+What topics have been discussed?
+Based on the context, the following topics were discussed:
+
+Greedy search and A* search algorithms
+Heuristic functions and path cost concepts
+Differences between Greedy search and A* search in terms of optimality
+Combining multiple heuristics
+Weighted A* search
+Comparison of different search algorithms (BFS, DFS, Uniform cost search, IDA) based on completeness, optimality, time and space complexity
+Introduction to knowledge base agents/logical agents
+
+Additionally, there were administrative discussions about:
+
+LMS timing updates
+Attendance tracking
+Exam schedules and format (online vs offline)
+Campus immersion dates
+
+
+
+
+What is knowledge based agent?
+What are the types of agents discussed?
+Based on the context, here are the answers:
+Knowledge based agent is an advanced type of intelligent agent that uses additional knowledge and focuses on knowledge-based concepts for making more complex decisions. It represents knowledge in terms of set of sentences (which basically means programs).
+Types of agents discussed in the context are:
+
+Knowledge base agent
+Logical agent
+Probabilistic reasoning agent
+Large language model agent
+
+These agents have specific features that allow them to make complex decisions. They are more advanced than simple intelligent agents which only work with percepts and actions from the environment.
+Note: While the context mentions these types, it doesn't provide detailed information about each type's specific characteristics.
+
+
+
+
+
+
+What prof told about Reality vs Knowledge representation slide?
+From the context, Prof briefly mentioned that in Reality vs Knowledge representation:
+
+It involves sentences (which means programs or logic)
+Has semantic aspects from which learning happens
+From semantic aspects of real world, some learning happens
+Based on model/sentences/logic, this learning needs to be followed
+From sentences, new sentences can be created
+These new sentences again have semantic aspects
+
+However, the professor was just starting to explain this topic and did not go into much detail in the available context.
+
+
+From the context, Prof explained that in Reality vs Knowledge representation:
+
+There are sentences (which means programs or logic)
+It has semantic aspects from which we learn something
+From semantic aspects of real world, learning happens based on model/sentences/logic
+From sentences, we can focus on creating new sentences
+These sentences again have semantic meaning
+It represents how we capture knowledge from real world (environment) and how we represent that knowledge
+
+The professor was explaining this concept at the end of the meeting while introducing knowledge base agents and logical agents.
+
+
+
+Catch me up on this meeting.
+Here's a catch-up on the meeting:
+The meeting was about AI coursework and had two main parts:
+
+Administrative discussion:
+
+
+Students discussed timing issues with Carol (PGD AI Manager) about class schedules showing wrong times (2 PM vs 2:30 PM)
+Discussed exam formats (online vs offline) and campus immersion dates
+Carol confirmed she'll update the LMS timing issues
+Students raised concerns about quiz scores not being released yet
+
+
+Professor's lecture:
+
+
+Professor Debasis Das taught about:
+
+Heuristic search algorithms
+A* search vs Greedy search
+Knowledge base agents and logical agents
+Started discussing first-order logic concepts
+
+
+
+The class had some technical and administrative queries at the start before moving into the actual lecture content.
+
+
+
+
+What is Knowledge based agents? What professor explained about declarative apparoach, separtion between knowledge and infence ?
+
+Based on the context, here's what the professor explained about Knowledge based agents:
+Knowledge based agents are agents that use a knowledge base which contains domain-specific content and facts. These facts are represented as sentences in formal language that are known to be true.
+Regarding declarative approach and separation:
+
+Declarative approach is used for building agents
+There is separation between:
+
+Data (which represents knowledge)
+Program (which handles inference)
+
+
+
+The professor explained that actions are based on knowledge which combines:
+
+Sentences (from knowledge base)
+Inference
+Objective functions and other parameters
+
+The agents use domain-independent algorithms through an inference engine to find new sentences using logic and entailment.
+Note: The context doesn't provide more detailed explanation about the declarative approach specifically, but focuses on the basic structure and components of knowledge based agents.
+
+
+
+
+
+
+What is Generic knowledge based agent and what Prof explained about pseudo code?
+Based on the context, Professor Debasis Das explained that Knowledge Based Agent (KB Agent) has these key components:
+
+It has domain specific content and a knowledge base file
+It contains an inference engine with domain independent algorithms
+Knowledge base is a set of facts/sentences in formal language that are known to be true
+It has three main functions:
+
+Prior knowledge function
+Knowledge base function
+Action function (called "ask")
+
+
+
+However, the specific details about Generic knowledge based agent and its pseudo code are not directly explained in the meeting transcript provided. The professor was about to explain more details but the context ends before that part.
+
+
+
+Explain Generic knowledge based agent  pseudo code? What Prof explained or TELL call and ASK call.
+Based on the context, here's an explanation of the Generic knowledge-based agent pseudo code:
+The knowledge-based agent has three main components:
+
+TELL function - This captures and stores previous knowledge/data from percepts (inputs from environment)
+ASK function - This raises queries and updates information based on the stored knowledge
+Second TELL function - This updates the knowledge base with new information after actions
+
+The process works like this:
+
+Initially, the agent starts with some prior knowledge in knowledge base (KB)
+When it receives percepts, first TELL function memorizes this information
+Then ASK function queries the knowledge base to determine logical actions
+The actions are recorded and knowledge base is updated using second TELL function
+This process repeats with T+1 (next time step), but now using updated knowledge instead of initial knowledge
+
+Professor gave an example of a coal mining robot:
+
+Robot initially needs manual direction (first knowledge)
+As it moves, it keeps updating its knowledge base
+After 2-3 rounds, it learns the pattern and can automatically follow same route
+This shows how knowledge base gets updated and improved over time through learning
+
+This is similar to how systems like ChatGPT improve - they start with initial knowledge and get better as their knowledge base grows through learning from more data points.
+
+
+
+
+
+What is Raj's question and what was the answer?
+Raj asked about what happens when contradictory actions are fed into the knowledge base. He gave an example where one action says "sleep at night" but another action says "wake up at night". He wanted to know if the knowledge base would always give the updated answer of "wake up at night" after overriding the previous action.
+Professor Debasis Das answered that this situation would be handled by adding conditional checks in the algorithm. He explained that it's not mandatory to use the same condition every time - you can have multiple actions based on multiple conditions (like one action for nighttime, another action for daytime). He then gave a real-world example of traffic management in Jodhpur heritage city to illustrate how conditions and restrictions can be implemented in a knowledge base system.
+
+
+
+What prof told about Different languages to represent knowledge?
+Based on the context, Professor mentioned several languages to represent knowledge:
+
+
+First-order logic and propositional logic - deals with facts, objects and relations between them. It uses true/false or unknown values.
+
+
+Temporal logic - includes time as additional parameter
+
+
+Probabilistic logic - values are between 0 and 1
+
+
+Fuzzy logic - deals with degree of truth based on fuzzy functions
+
+
+Natural Language Processing (NLP) or Natural Language Understanding (NLU) - for pattern representation, facts and objects
+
+
+The professor mentioned these are mathematical concepts used to implement code after verifying the logic is correct. Each language has its own notations that need to be remembered to develop logic.
+
+
+
+
+What is Probablistic Reasoning?
+Based on the context, Probabilistic Reasoning is a type of reasoning that deals with uncertainty, which logical reasoning cannot handle. It uses probability theory where values fall between 0 and 1 (or 0% to 100%).
+A simple example given in the context is coin tossing:
+
+When tossing one coin, probability of heads or tails is 1/2 (50%)
+When tossing two coins, probability becomes 1/4 for each possible combination
+
+Similarly with a six-faced die, the probability of getting any number is 1/6.
+Probabilistic Reasoning is used alongside decision theory and machine learning models to handle real-world scenarios with uncertainty, like dealing with noisy sensor data or situations where complete information isn't available (like during COVID-19 virus research mentioned in the context).
+
+
+
+
+What Prof told about Vision and Image processing?
+Based on the context, Probabilistic Reasoning is a type of reasoning that deals with uncertainty, which logical reasoning cannot handle. It uses probability theory where values fall between 0 and 1 (or 0% to 100%).
+A simple example given in the context is coin tossing:
+
+When tossing one coin, probability of heads or tails is 1/2 (50%)
+When tossing two coins, probability becomes 1/4 for each possible combination
+
+Similarly with a six-faced die, the probability of getting any number is 1/6.
+Probabilistic Reasoning is used alongside decision theory and machine learning models to handle real-world scenarios with uncertainty, like dealing with noisy sensor data or situations where complete information isn't available (like during COVID-19 virus research mentioned in the context).
+
+
+
+What Prof told about NLP?
+Based on the context, Prof mentioned that NLP (Natural Language Processing) is related to:
+
+It deals with text to speech and speech to text conversion
+It enables machine translation and text generation
+It can be used for question answering systems
+It works with voice recognition systems like in vehicles and Alexa
+NLP helps convert one language to another automatically when someone doesn't know a particular language
+It is part of natural language which also includes NLU (Natural Language Understanding)
+
+The professor discussed NLP briefly at the end of the meeting while covering different applications of AI technologies.
+
+
+
+What prof told about LLMs?
+From the context, Prof mentioned that LLMs (Large Language Models):
+
+Store knowledge parameters in deep neural networks
+Have knowledge base containing relationships, grammar and facts
+Use prompts for replies, unlike previous models that used simple actions and learning mechanisms
+
+However, the context ends just as the professor begins explaining more about LLMs, so complete information about what he taught regarding LLMs is not available in this meeting transcript.
+
+
+
+What prof told about Using Natural language for knowledge representation?
+From the context, Professor explained that for knowledge representation using natural language:
+
+Large Language Models (LLM) use natural language to generate text based on the model's knowledge base representation
+Users can ask questions about real world in natural language format
+LLM generates text responses that should be useful in real world applications
+If responses or objective function is not clear, users can modify or change their questions/queries to solve problems
+
+The professor discussed this as part of explaining how LLMs act as knowledge base agents, where natural language is used as the interface for knowledge representation and interaction.
+
+
+
+LLM as a Knowledge based agents. Can you explain?
+Based on the context, here's the explanation about LLM as Knowledge based agents and comparison between ChatGPT and Deepseek:
+LLM as Knowledge based agents:
+
+They store knowledge parameters in deep neural networks
+Unlike traditional knowledge base systems, LLMs use prompts for replies instead of just actions
+They can generate data based on their knowledge
+LLMs have two main components:
+
+Domain independent content (pre-trained knowledge base)
+Domain specific content (fine-tuning)
+
+
+
+Comparison between ChatGPT and Deepseek:
+
+Using example of comparing numbers 7 and 11:
+
+ChatGPT gives direct answer quickly (7 is less than 11)
+Deepseek takes more time but provides:
+
+Proper justification
+Multiple related queries in backend (like 7>=11, 7<=11, 7=11)
+More accurate results due to more comprehensive backend models
+Has more facts and queries in pretrained knowledge base
+
+
+
+
+
+Deepseek was trained for 2 years with extensive information from different sources, making it more thorough but slower than ChatGPT in providing responses.
+
+
+
+
+What comparision he explained about chat GPT and Deepseek?
+Based on the context, the professor explained following comparison between Chat GPT and Deepseek:
+
+Response Time and Processing:
+
+
+Chat GPT gives direct and quick answers
+Deepseek takes more time as it processes multiple queries in backend
+
+
+Answer Approach:
+
+
+For example, when asked if "7 is greater than 11":
+
+Chat GPT directly gives simple answer that 7 is less than 11
+Deepseek provides proper justification and considers multiple scenarios (like 7=11, 7≤11, 7≥11 etc.)
+
+
+
+
+Knowledge Base:
+
+
+Deepseek has more comprehensive backend with:
+
+More facts
+More queries
+More data
+Multiple learning models
+
+
+
+
+Accuracy:
+
+
+Deepseek provides more accurate results with multiple directions due to its comprehensive checking
+
+
+When Unable to Answer:
+
+
+Deepseek will suggest asking different types of questions (like technical, analytical or mathematical questions)
+
+The context mentions that Deepseek trained their model for 2 years with information from various sources.
+
+
+
+What were the questions on chatgpt and deepseek operations? What was the answers?
+Based on the context, here are the questions and answers about ChatGPT and Deepseek:
+Question asked to both systems: Is 7 less than 11?
+ChatGPT's response:
+
+Gives direct and quick answer that 7 is less than 11
+Answers based on simple number system understanding
+
+Deepseek's response:
+
+Takes more time to answer
+Provides proper justification why 7 is less than 11
+In the backend, it also checks multiple related questions like:
+
+Is 7 greater than 11?
+Is 7 equal to 11?
+Is 7 less than or equal to 11?
+Is 7 greater than or equal to 11?
+
+
+
+The main difference was that ChatGPT focused on faster execution with direct answers, while Deepseek took more time but provided more comprehensive answers with reasoning due to its additional backend processing and "thinking ability."
+
+
+
+What prof told in Pseudo code LLM as a Generic Knowledge Based agent? Why TELL is removed in pseudo code?
+Based on the context, Prof explained that in LLM as a Knowledge Based agent, TELL function is removed from pseudo code because LLM uses pre-trained knowledge base. Unlike traditional knowledge based agents that need TELL functions to update knowledge incrementally, LLMs already have pre-trained data and domain independent content. The professor specifically mentioned that we "only give our query" since it's pre-trained, so we don't require initial data updates through TELL functions.
+Prof explained that LLM knowledge base agent has:
+
+Percept = Prompt
+Already generated tokens (pre-trained)
+Action = Next token generation
+
+So the traditional TELL functions used for updating knowledge base incrementally are not needed since LLM relies on its comprehensive pre-trained knowledge base instead.
+
+
+
+What topics have been discussed?
+Based on the context, the following topics were discussed:
+
+Knowledge Base Agents and their components
+Different types of logic (First order logic, temporal logic, probabilistic logic)
+Logical Agents and their characteristics
+Large Language Models (LLM) and their comparison (ChatGPT vs Deep Sick)
+Probabilistic reasoning and uncertainty handling
+Administrative matters like:
+
+Class timing updates in LMS (2:00 PM to 2:30 PM)
+Campus immersion dates
+Exam scheduling
+Quiz scores and attendance tracking
+
+
+
+The discussion primarily focused on theoretical concepts of AI agents and their practical applications, along with some administrative matters related to the course.
+
+
+
+
+Catch me up on this meeting.
+Let me catch you up on this meeting:
+This was an AI class meeting titled "Batch 2_PGDAI_T1_Artificial Intelligence" with 26 participants. The meeting covered several key points:
+
+Administrative matters:
+
+
+Discussion about updating class timing from 2 PM to 2:30 PM in the LMS system
+Concerns about exam dates and campus immersion schedules
+Questions about quiz scores not being released yet
+
+
+Main lecture content:
+
+
+Professor Debasis Das taught about knowledge-based agents and logical agents in AI
+Covered concepts like knowledge representation, inference, and different types of logic
+Discussed differences between ChatGPT and Deep Sick AI models
+Explained how large language models (LLMs) work as knowledge-based agents
+Talked about probabilistic reasoning and machine learning concepts
+
+The meeting format was interactive with students asking questions throughout the lecture. The professor used examples and real-world applications to explain the concepts.
+
+
+
+
+
+
+
+What is local Search/ What are the types?
+From the context, Local Search is discussed as having different types/categories:
+Types of Local Search:
+
+Hill climbing search
+Simulated analytics search
+Evaluation search/Genetic algorithm based search
+Search in continuous space
+
+The context does not provide a complete definition of what local search is, as the professor was just beginning to introduce this topic at the end of the meeting. He mentioned it was a new concept they were about to discuss after covering informed and uninformed searches, but did not get into the details of what local search actually is.
+For a complete understanding of local search, you would need information from the next lecture or additional sources.
+
+
+
+
+What prof explained about Local Search?
+Based on the context, Prof explained these key points about Local Search:
+
+
+In Local Search, we focus on local movement from state to state, unlike previous search methods that look at large search spaces.
+
+
+It uses utility functions to find good states and optimize solutions.
+
+
+Main advantages of Local Search:
+
+
+
+Needs fast and memory efficient way to find good states
+Performs series of local movements to improve solutions
+Moves from current state to neighboring better states
+
+
+Key characteristics of Local Search:
+
+
+Can be goal-based or utility-based
+Goal state is unknown
+May not have search tree structure
+Used for general optimization problems
+
+The professor also mentioned that Local Search helps overcome challenges of previous search methods which required large search spaces and more memory/time complexity.
+The example of N-Queen problem was started but the context ends before completing that explanation.
+
+
+
+
+What prof explained about n-Queens problem?
+Based on the context, regarding n-Queens problem, the professor explained:
+
+
+The problem involves placing N queens on an N x N chess board
+
+
+Rules: No two queens can be on same row, column or diagonal
+
+
+He showed examples of solutions and conflicts:
+
+Showed one solution with 2 conflicts (one vertical and one diagonal)
+Showed another solution that met all requirements (no conflicts)
+
+
+
+For 4-queens problem:
+
+State space has 1,820 possible combinations initially
+Using local search approach, they can reduce states to 256
+This reduction makes it more time and space efficient
+
+
+
+The professor mentioned they will discuss in next class about how exactly they achieve this state reduction using local search algorithms.
+
+
+The problem can be solved using either goal-based agent or utility-based agent approaches along with optimization techniques.
+
+
+
+
+What topics have been discussed?
+Based on the meeting transcript, the following topics were discussed:
+
+Knowledge Base Agents and their functions
+Logical Agents and their features
+Different types of logic (First order logic, temporal logic, probabilistic logic)
+Large Language Models (LLM) and comparison between ChatGPT and Deep Sick
+Local Search concepts and mechanisms
+N-Queen problem as an example of local search
+Differences between informed and uninformed search
+Basic concepts of probability and token generation in LLMs
+The role of pre-trained knowledge in modern AI systems
+Brief discussion on AI applications in real life including face detection and natural language processing
+
+The meeting appears to be part of an Artificial Intelligence course covering both theoretical concepts and practical applications.
+
+
+
+Catch me up on this meeting.
+This was a class session on Artificial Intelligence with Professor Debasis Das teaching batch 2 PGDAI students. The key points covered were:
+
+
+Started with administrative discussions about class timing issues (changing from 2PM to 2:30PM in LMS)
+
+
+Main lecture covered:
+
+
+
+Knowledge base agents and logical agents
+Different types of logic (first order, temporal, probabilistic)
+Comparison between ChatGPT and Deep Sick's approaches
+Local search concepts and optimization problems
+Example of N-Queen problem was discussed
+
+
+
+The professor explained how modern AI systems like ChatGPT use pre-trained knowledge bases, while Deep Sick takes longer but provides more thoughtful responses by considering multiple queries.
+
+
+The class ended with introduction to local search algorithms and optimization problems, which will continue in the next session.
+
+
+Overall it was a technical lecture focused on AI concepts and their practical applications.
+
+
+https://chatgpt.com/canvas/shared/67cd0882dbd88191bcfcc34c883ab58c
+
