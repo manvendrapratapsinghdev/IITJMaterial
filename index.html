@@ -12,10 +12,7 @@
         <h1 class="text-xl font-bold mb-4 text-center  pb-3 border-b border-blue-500">Task Tracker</h1>
 
         <div class="grid grid-cols-2 gap-4">
-            <div>
-                <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Quiz</h3>
-                <ul id="quizList" class="space-y-2"></ul>  
-            </div>
+            
             <div>
                 <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Assignments</h3>
                 <ul id="assignmentList" class="space-y-2"></ul>
@@ -24,7 +21,10 @@
                 <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Exams</h3>
                 <ul id="examlist" class="space-y-2"></ul>
             </div>
-           
+           <div>
+                <h3 class="text-lg font-semibold mb-2 pb-2 border-b border-gray-300">Quiz</h3>
+                <ul id="quizList" class="space-y-2"></ul>  
+            </div>
             
         </div>
     </div>
@@ -40,13 +40,13 @@
         const assignments = [
             { name: "ODS", dueDate: "2025-04-13" },
          { name: "ML-2nd", dueDate: "2025-04-13" },
-            { name: "AI-2nd", dueDate: "2025-04-14" },
+            { name: "AI-2nd", dueDate: "2025-04-17" },
          { name: "DSA-2nd", dueDate: "2025-04-15" }
         ];
 
         const quiz = [
           
-            { name: "Quiz 2 - ML", dueDate: "2025-04-13" }
+            
         ];
 
         function getColor(daysLeft) {
