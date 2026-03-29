@@ -337,6 +337,12 @@ A minimal Express.js microservice exposing `GET /service2` with the same respons
 
 ## Plagiarism Declaration
 
-I hereby declare that this implementation and documentation titled **"Local VM Resource Monitoring with Automatic Cloud Scaling"** is my original work. No part of this submission has been copied from any external source (except public download links such as AWS CLI and the [Ubuntu 24.04.3 ISO](https://mirrors.esto.network/ubuntu-releases/24.04.3/ubuntu-24.04.3-desktop-amd64.iso)). All scripts, configurations, and documentation were developed and implemented independently for academic purposes.
+I hereby declare that this implementation and documentation titled **"Local VM Resource Monitoring with Automatic Cloud Scaling"** is my original work. No part of this submission has been copied from any external source. All scripts, configurations, and documentation were developed and implemented independently for academic purposes. The following open-source tools, libraries, and platforms were used in the implementation:
+
+- **Python libraries:** Flask (web framework), psutil (system monitoring)
+- **Node.js libraries:** Express.js (API gateway and microservices)
+- **Infrastructure:** Docker (containerization), AWS CLI (cloud provisioning), VirtualBox (virtualization)
+- **OS:** [Ubuntu 24.04.3 LTS](https://mirrors.esto.network/ubuntu-releases/24.04.3/ubuntu-24.04.3-desktop-amd64.iso)
+- **Cloud:** AWS EC2 (auto-scaling target)
 
 **Manvendra Pratap Singh (M25AI2122)**
